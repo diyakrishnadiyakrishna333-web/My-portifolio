@@ -4,141 +4,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diya Krishna | Portfolio</title>
+
+    <title>Diya Krishna C R | Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-    <nav class="navbar">
-        <h2>✦ Diya Krishna</h2>
-        <div class="nav-links">
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#home" class="logo">Diya <span>Krishna C R</span></a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="navbar" id="navbar">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#goals">Career Goals</a>
             <a href="#contact">Contact</a>
-        </div>
-        <button id="themeBtn">☀️</button>
-    </nav>
-</header>
+        </nav>
+    </header>
 
-<main>
-<section id="home" class="hero">
-    <p class="welcome">WELCOME TO MY PORTFOLIO</p>
-    <h1>Hello, I'm <span>Diya Krishna</span></h1>
-    <h2>I'm a <span id="typing"></span></h2>
-    <p>
-        Computer Science Engineering student passionate
-        about programming, technology and innovation.
-    </p>
-    <a class="btn" href="#projects">Explore My Work</a>
-    <a class="btn secondary" href="#contact">Contact Me</a>
-</section>
+    <!-- HOME -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <p class="welcome">WELCOME TO MY PORTFOLIO 🌿</p>
 
-<section id="about">
-    <h2>About Me</h2>
-    <div class="about-card">
-        <p>
-            I am pursuing B.Tech in Computer Science Engineering
-            at Jawaharlal College of Engineering and Technology,
-            Lakkidi.
-        </p>
-        <p>
-            I enjoy learning programming, developing websites
-            and solving technical problems. My ambition is to
-            become a skilled software engineer.
-        </p>
-        <blockquote>
-            "Every expert was once a beginner."
-        </blockquote>
-    </div>
-</section>
+            <h1>Hello, I'm <span>Diya Krishna C R</span></h1>
 
-<section id="skills">
-    <h2>My Skills</h2>
-    <div class="grid">
-        <div class="card">💻 C Programming</div>
-        <div class="card">🌐 HTML</div>
-        <div class="card">🎨 CSS</div>
-        <div class="card">⚡ JavaScript</div>
-        <div class="card">📚 Data Structures</div>
-        <div class="card">🐙 Git & GitHub</div>
-    </div>
-</section>
+            <h2>Computer Science Engineering Student</h2>
 
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="grid">
-        <div class="card project">
-            <h3>🌐 Personal Portfolio</h3>
-            <p>A personal website built using HTML, CSS and JavaScript.</p>
-            <span>HTML • CSS • JavaScript</span>
+            <p>
+                A curious learner exploring technology,
+                creativity and innovation.
+                I love learning new skills and building
+                meaningful digital experiences.
+            </p>
+
+            <a href="#projects" class="btn">Explore My Work ✨</a>
         </div>
 
-        <div class="card project">
-            <h3>🎓 CampusConnect</h3>
-            <p>A college project idea for campus announcements,
-            events and student information.</p>
-            <span>Web Development</span>
+        <div class="home-decoration">
+            <div class="circle">🌱</div>
         </div>
+    </section>
 
-        <div class="card project">
-            <h3>💻 C Programming</h3>
-            <p>A collection of programs created while learning
-            programming and data structures.</p>
-            <span>C Programming</span>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <h2 class="section-title">About <span>Me</span> 🌼</h2>
+
+        <div class="card about-card">
+            <h3>Who Am I?</h3>
+
+            <p>
+                I am Diya Krishna C R, a B.Tech Computer Science
+                Engineering student at Jawaharlal College of
+                Engineering and Technology (JCET), Lakkidi.
+
+                I am passionate about technology, programming
+                and continuous learning. I enjoy exploring
+                new ideas and improving my technical skills.
+            </p>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="education">
-    <h2>Education</h2>
-    <div class="card">
-        <h3>B.Tech Computer Science Engineering</h3>
-        <p>Jawaharlal College of Engineering and Technology (JCET)</p>
-        <p>Lakkidi, Kerala</p>
-        <span>Currently Pursuing</span>
-    </div>
-</section>
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <h2 class="section-title">My <span>Skills</span> ✨</h2>
 
-<section id="goals">
-    <h2>Career Goals</h2>
-    <div class="card">
-        <ul>
-            <li>Become a skilled software engineer.</li>
-            <li>Build real-world projects.</li>
-            <li>Contribute to open-source development.</li>
-            <li>Gain practical experience through internships.</li>
-            <li>Explore emerging technologies.</li>
-        </ul>
-    </div>
-</section>
+        <div class="card-grid">
 
-<section id="contact">
-    <h2>Let's Connect!</h2>
-    <div class="card">
-        <p>Interested in technology and collaboration?
-        Feel free to connect with me.</p>
+            <div class="card">
+                <div class="skill-icon">🌐</div>
+                <h3>HTML</h3>
+                <p>Building website structures.</p>
+            </div>
 
-        <a class="btn" href="mailto:diyakrishnadiyakrishna333@gmail.com">
-            Send Me an Email
-        </a>
+            <div class="card">
+                <div class="skill-icon">🎨</div>
+                <h3>CSS</h3>
+                <p>Designing beautiful websites.</p>
+            </div>
 
-        <p>
-            <a href="https://github.com/YOUR-USERNAME">GitHub</a>
-            |
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-        </p>
-    </div>
-</section>
-</main>
+            <div class="card">
+                <div class="skill-icon">⚡</div>
+                <h3>JavaScript</h3>
+                <p>Creating interactive websites.</p>
+            </div>
 
-<footer>
-    <p>© 2026 Diya Krishna | Built with HTML, CSS & JavaScript</p>
-    <button id="topBtn">↑ Back to Top</button>
-</footer>
+            <div class="card">
+                <div class="skill-icon">💻</div>
+                <h3>C Programming</h3>
+                <p>Learning programming fundamentals.</p>
+            </div>
 
-<script src="script.js"></script>
+            <div class="card">
+                <div class="skill-icon">📂</div>
+                <h3>Git & GitHub</h3>
+                <p>Version control and project management.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <h2 class="section-title">My <span>Projects</span> 💻</h2>
+
+        <div class="card-grid">
+
+            <div class="card project-card">
+                <div class="project-icon">🌿</div>
+                <h3>MindFlow</h3>
+                <p>
+                    A productivity platform concept designed
+                    to organise tasks and improve daily focus.
+                </p>
+                <span class="tag">HTML · CSS · JavaScript</span>
+            </div>
+
+            <div class="card project-card">
+                <div class="project-icon">🌸</div>
+                <h3>Personal Portfolio</h3>
+                <p>
+                    My personal website showcasing my skills,
+                    education, projects and career goals.
+                </p>
+                <span class="tag">HTML · CSS · JavaScript</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+        <h2 class="section-title">My <span>Education</span> 🎓</h2>
+
+        <div class="card education-card">
+            <div class="education-icon">🎓</div>
+
+            <h3>B.Tech in Computer Science and Engineering</h3>
+
+            <p>Jawaharlal College of Engineering and Technology</p>
+
+            <p>Lakkidi, Kerala</p>
+
+            <span class="tag">Undergraduate Student</span>
+        </div>
+    </section>
+
+    <!-- CAREER GOALS -->
+    <section class="section" id="goals">
+        <h2 class="section-title">Career <span>Goals</span> 🚀</h2>
+
+        <div class="card goals-card">
+            <p>
+                My goal is to become a skilled software professional
+                and build innovative technology solutions.
+            </p>
+
+            <ul>
+                <li>Strengthen my programming skills.</li>
+                <li>Explore software development and new technologies.</li>
+                <li>Build real-world projects.</li>
+                <li>Gain practical experience through internships.</li>
+                <li>Continuously learn and grow in the technology field.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Let's <span>Connect</span> 💌</h2>
+
+        <div class="card contact-card">
+            <p>
+                Thank you for visiting my portfolio!
+                Feel free to connect with me.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:diyakrishnadiyakrishna@gmail.com"
+                   class="btn">
+                    📧 Email Me
+                </a>
+
+                <span class="btn linkedin-label">
+                    LinkedIn: Diya Krishna C R
+                </span>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Made with 💚 by Diya Krishna C R</p>
+        <p>© <span id="year"></span> All Rights Reserved.</p>
+    </footer>
+
+    <button id="top-button" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
