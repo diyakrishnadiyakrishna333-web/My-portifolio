@@ -1,20 +1,54 @@
+// MOBILE NAVIGATION
 
-// DARK AND LIGHT MODE
-const themeBtn = document.getElementById("themeBtn");
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
 
-themeBtn.addEventListener("click", function() {
-    document.body.classList.toggle("light");
+menuToggle.addEventListener("click", function () {
+    navbar.classList.toggle("active");
 
-    themeBtn.textContent =
-        document.body.classList.contains("light")
-        ? "🌙" : "☀️";
+    const isOpen = navbar.classList.contains("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.textContent = isOpen ? "✕" : "☰";
 });
 
-// TYPING ANIMATION
+// CLOSE MENU AFTER CLICKING A LINK
+
+document.querySelectorAll(".navbar a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navbar.classList.remove("active");
+        menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+    });
+});
+
+// CURRENT YEAR
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// BACK TO TOP BUTTON
+
+const topButton = document.getElementById("top-button");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+});
+
+topButton.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 const words = [
-    "CSE Student",
-    "Web Developer",
     "Programmer",
+    "Web Developer",
+    "Creative Learner",
     "Future Software Engineer"
 ];
 
@@ -23,36 +57,29 @@ let charIndex = 0;
 let deleting = false;
 
 function typeEffect() {
-    const typing = document.getElementById("typing");
+    const element = document.getElementById("typing-text");
     const word = words[wordIndex];
 
-    typing.textContent = word.substring(0, charIndex);
-
-    if (!deleting && charIndex < word.length) {
+    if (!deleting) {
+        element.textContent = word.substring(0, charIndex + 1);
         charIndex++;
-        setTimeout(typeEffect, 100);
-    }
-    else if (!deleting) {
-        deleting = true;
-        setTimeout(typeEffect, 1200);
-    }
-    else if (charIndex > 0) {
+
+        if (charIndex === word.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1200);
+            return;
+        }
+    } else {
+        element.textContent = word.substring(0, charIndex - 1);
         charIndex--;
-        setTimeout(typeEffect, 50);
+
+        if (charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
     }
-    else {
-        deleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(typeEffect, 300);
-    }
+
+    setTimeout(typeEffect, deleting ? 60 : 110);
 }
 
 typeEffect();
-
-// BACK TO TOP
-document.getElementById("topBtn").addEventListener("click", function() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
