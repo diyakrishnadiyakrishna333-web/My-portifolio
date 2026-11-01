@@ -1,5 +1,5 @@
 
-/* MATCHA CREAM THEME */
+/* MATCHA CREAM PORTFOLIO THEME */
 
 :root {
     --background: #D8EAE3;
@@ -32,7 +32,7 @@ body {
     top: 0;
     z-index: 100;
     background: var(--heading);
-    padding: 16px 6%;
+    padding: 16px 4%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,6 +45,8 @@ body {
     font-size: 21px;
     font-weight: 700;
     text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .logo span {
@@ -54,7 +56,8 @@ body {
 .navbar {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: flex-end;
+    gap: 9px;
 }
 
 .navbar a {
@@ -72,22 +75,16 @@ body {
     background: var(--card);
     transform: translateY(-3px);
 }
+
 .menu-toggle {
     display: none;
-    background: var(--button);
-    color: var(--heading);
-    border: none;
-    border-radius: 8px;
-    padding: 7px 12px;
-    font-size: 20px;
-    cursor: pointer;
 }
 
 /* HOME */
 
 .home {
     min-height: 85vh;
-    padding: 70px 10%;
+    padding: 70px 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -127,6 +124,10 @@ body {
     margin-bottom: 25px;
 }
 
+.home-decoration {
+    flex-shrink: 0;
+}
+
 .circle {
     width: 210px;
     height: 210px;
@@ -136,6 +137,30 @@ body {
     place-items: center;
     font-size: 95px;
     box-shadow: var(--shadow);
+}
+
+/* TYPING EFFECT */
+
+.typing-heading {
+    color: var(--heading);
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+#typing-text {
+    color: #638F7D;
+    font-weight: 700;
+}
+
+.cursor {
+    color: var(--heading);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 /* BUTTONS */
@@ -163,7 +188,7 @@ body {
 .section {
     padding: 65px 9%;
     text-align: center;
-    scroll-margin-top: 85px;
+    scroll-margin-top: 100px;
 }
 
 .section-title {
@@ -293,33 +318,35 @@ body {
 @media (max-width: 900px) {
 
     .header {
-        padding: 15px 5%;
+        flex-direction: column;
+        padding: 15px 4%;
+        gap: 13px;
     }
 
-    .menu-toggle {
-        display: block;
+    .logo {
+        font-size: 21px;
+        text-align: center;
     }
+
+    /* Keep navigation visible */
 
     .navbar {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 18px;
-        background: var(--heading);
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .navbar.active {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 9px;
+        width: 100%;
     }
 
     .navbar a {
         text-align: center;
-        padding: 11px;
-        font-size: 14px;
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 
     .home {
@@ -344,26 +371,25 @@ body {
 }
 
 @media (max-width: 400px) {
+
     .logo {
-        font-size: 17px;
+        font-size: 19px;
+    }
+
+    .navbar {
+        gap: 7px;
+    }
+
+    .navbar a {
+        padding: 7px 10px;
+        font-size: 11px;
     }
 
     .card {
         padding: 22px;
     }
-}
-#typing-text {
-    color: #638F7D;
-    font-weight: 700;
-}
 
-.cursor {
-    color: #355B50;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
+    .home h1 {
+        font-size: 30px;
     }
 }
